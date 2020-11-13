@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo >
+    <data >
+    
+
+        <report 
+            id="action_report_sale_container_receive"
+            string="Print Return"
+            model="sale.container.receive" 
+            report_type="qweb-html"
+            file="sale_container.report_sale_container_receive" 
+            name="sale_container.report_sale_container_receive"
+            print_report_name="'Sale Container Receive- %s' % (object.name)"
+        />
+
+    
+
+    </data>
+</odoo>

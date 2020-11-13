@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+
+
+    <record id="container_sale_order_form_inherit" model="ir.ui.view">
+        <field name="model">sale.order</field>
+        <field name="name">Sale Order Container</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+            <button string="⇒ Containers" type="object"  name="set_containers"  class="oe_link oe_edit_only" 
+                    attrs="{'invisible': [('state','not in',('draft'))]}" 
+                    groups="sale_container.sale_container_user_group"/>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page  name="sale_container_ids_page" string="Container Lines" groups="sale_container.sale_container_user_group">
+                    <field name="container_ids" context="{'active_id': active_id}" >
+                      <tree create="false" >
+                        <field name="name"/>
+                        <field name="date_container"/>
+                        <field name="state"/>
+                      </tree>
+                    </field>
+               </page>
+            </xpath>
+
+
+        </field>
+    </record>
+
+  </data>
+</odoo>

@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sale_container_sales_team,access_sale_sales_team_container,model_sale_container,sales_team.group_sale_salesman,1,0,0,0
+access_sale_container_user,access_sale_container,model_sale_container,sale_container.sale_container_user_group,1,1,1,1
+access_sale_container_line_user,access_sale_container_line,model_sale_container_line,sale_container.sale_container_user_group,1,1,1,1
+
+
