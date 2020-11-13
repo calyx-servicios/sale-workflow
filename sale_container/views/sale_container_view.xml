@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+      <record model='ir.ui.view' id='sale_container_line_form'>
+            <field name="name">sale.container.line.form</field>
+            <field name="model">sale.container.line</field>
+            <field name="arch" type="xml">
+                <form string="Sale Container Line">
+                       <field name="product_id" />
+                       <field name="quantity"/>
+                </form>
+            </field>
+        </record>
+
+      <record model='ir.ui.view' id='sale_container_line_tree'>
+            <field name="name">sale.container.line.tree</field>
+            <field name="model">sale.container.line</field>
+            <field name="arch" type="xml">
+                <tree string="Sale Container Line">
+                       <field name="sale_container_id"/>
+                       <field name="partner_id"/>
+                       <field name="product_id" />
+                       <field name="quantity"/>
+                       <field name="returned_quantity"/>
+                       <field name="remain_quantity"/>
+                       <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='sale_container_form'>
+            <field name="name">sale.container.order.form</field>
+            <field name="model">sale.container</field>
+            <field name="arch" type="xml">
+                <form string="Sale Container">
+                         <header>
+                                <button name="action_cancel" type="object" states="draft,open,close" class="oe_highlight" string="Cancel"/>
+                                <button name="action_draft" type="object" states="cancel" class="oe_highlight" string="Draft"/>
+                                 <button name="action_open" type="object" states="draft" class="oe_highlight" string="Open"/>
+                                 <button name="%(action_sale_container_return)d" type="action" states="open" class="oe_highlight" string="Return"/>
+                                <field name="state" widget="statusbar" editable="True"/>
+                        </header>
+
+                    <sheet>
+                        <div class="oe_title">
+                          <h1>
+                              <label string="Sale Container " />
+                              <field name="name" class="oe_inline" readonly="1"/>
+                          </h1>
+                        </div>
+                         
+                        <group>
+                        <group>
+                        <field name="partner_id" attrs="{'readonly': [('state', 'in', ('open','close','cancel'))]}"/>
+                         </group>
+                         
+                         <group> 
+                        <field name="date_container"/>
+                        </group>
+                        <group>
+                        <field name="sale_order_id" attrs="{'readonly': [('state', 'in', ('open','close','cancel'))]}"/>
+                         </group>
+                        </group>
+                    <notebook>
+                    <page string="Products">
+                     <field name="line_ids" attrs="{'readonly': [('state', 'in', ('open','close','cancel'))]}">
+                       <tree string="Container Lines" editable="bottom" >
+                          <field name="product_id" domain="[('container_ok','=',True)]" />
+                          <field name="quantity"/>
+                          <field name="returned_quantity"/>
+                          <field name="remain_quantity"/>
+                       </tree>
+
+                     </field>
+                     <div class="oe_clear"/>
+                     <field name="note" class="oe_inline" placeholder="Terms and conditions..."/>
+                    </page>
+                    
+                    </notebook>
+                    </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+
+                </form>
+            </field>
+        </record>
+ 
+      <record model='ir.ui.view' id='sale_container_order_tree'>
+            <field name="name">sale.container.tree</field>
+            <field name="model">sale.container</field>
+            <field name="arch" type="xml">
+                <tree string="Sale Container">
+                    <field name="name" />
+                    <field name="date_container"/>
+                    <field name="user_id"/>
+                    <field name="partner_id"/>
+                    <field name="note"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_sale_container_filter" model="ir.ui.view">
+            <field name="name">sale.container.select</field>
+            <field name="model">sale.container</field>
+            <field name="arch" type="xml">
+            <search string="Search Sale Container">
+                    <field name="name" />
+                    <field name="user_id" />
+                    <field name="state" />
+                    <field name="note" />
+                    <field name="partner_id" />
+                    <separator/>
+                    <filter name="open" string="Open" domain="[('state','=', 'open')]"/>
+                    <separator/>
+                    <filter string="Creator" icon="terp-partner" domain="[]" context="{'group_by':'create_uid'}"/>
+                    <filter string="User" icon="terp-partner" domain="[]" context="{'group_by':'user_id'}"/>
+                    <filter string="Partner" icon="terp-partner" domain="[]" context="{'group_by':'partner_id'}"/>
+                    <separator/>
+                    <filter string="State" icon="terp-partner" domain="[]" context="{'group_by':'state'}"/>
+            </search>
+            </field>
+        </record>
+
+
+        <record id='sale_container_act' model='ir.actions.act_window'>
+            <field name="name">Sale Container</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sale.container</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{"search_default_parent_false" : True,}</field>  
+            <field name="search_view_id" ref="view_sale_container_filter"/>
+            <field name="help" type="html">
+              <p>
+                You will find here all sales container moves.
+              </p><p>
+                You can place here every move related with sales container.
+              </p>
+            </field>
+        </record>
+
+
+        <record id="view_sale_container_line_filter" model="ir.ui.view">
+            <field name="name">sale.container.line.select</field>
+            <field name="model">sale.container.line</field>
+            <field name="arch" type="xml">
+            <search string="Search Sale Container Line">
+                    <!-- <field name="name" /> -->
+                    <field name="user_id" />
+                    <field name="state" />
+                    <field name="partner_id" />
+                    <field name="product_id" />
+                    <separator/>
+                    <filter name="open" string="Open" domain="[('state','=', 'open')]"/>
+                    <separator/>
+                    <filter string="Creator" icon="terp-partner" domain="[]" context="{'group_by':'create_uid'}"/>
+                    <filter string="User" icon="terp-partner" domain="[]" context="{'group_by':'user_id'}"/>
+                    <filter string="Partner" icon="terp-partner" domain="[]" context="{'group_by':'partner_id'}"/>
+                    <filter string="Product" icon="terp-partner" domain="[]" context="{'group_by':'product_id'}"/>
+                    <separator/>
+                    <filter string="State" icon="terp-partner" domain="[]" context="{'group_by':'state'}"/>
+            </search>
+            </field>
+        </record>
+
+
+        <record id='sale_container_line_act' model='ir.actions.act_window'>
+            <field name="name">Sale Container Line</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sale.container.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+            <field name="context">{"search_default_parent_false" : True,}</field>  
+            <field name="search_view_id" ref="view_sale_container_line_filter"/>
+            <field name="help" type="html">
+              <p>
+                You will find here all sales container line moves.
+              </p>
+            </field>
+         </record>
+
+        
+        <record id='sale_container_simple_act' model='ir.actions.act_window'>
+            <field name="name">Simple Return</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sale.container.simple</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="context">{"search_default_parent_false" : True,}</field> 
+            
+         </record>
+
+
+         <!-- ========================== -->
+         <record model='ir.ui.view' id='sale_container_receive_form'>
+            <field name="name">sale.container.receive.form</field>
+            <field name="model">sale.container.receive</field>
+            <field name="arch" type="xml">
+                <form string="Sale Container Receive">
+                         <header>
+                                <button name="action_cancel" type="object" states="draft,close" class="oe_highlight" string="Cancel"/>
+                                <!--<button name="action_draft" type="object" states="cancel" class="oe_highlight" string="Draft"/>
+                                 <button name="action_open" type="object" states="draft" class="oe_highlight" string="Open"/>
+                                 <button name="%(action_sale_container_return)d" type="action" states="open" class="oe_highlight" string="Return"/> -->
+                                <field name="state" widget="statusbar" editable="True"/>
+                        </header>
+
+                    <sheet>
+                        <div class="oe_title">
+                          <h1>
+                              <label string="Sale Container Return " />
+                              <field name="name" class="oe_inline" readonly="1"/>
+                          </h1>
+                        </div>
+                         
+                        <group>
+                        <group>
+                        <field name="partner_id" attrs="{'readonly': [('state', 'in', ('open','close','cancel'))]}"/>
+                         </group>
+                         
+                         <group> 
+                        <field name="date_container"/>
+                        </group>
+                        
+                        </group>
+                    <notebook>
+                    <page string="Products">
+                     <field name="line_ids" >
+                       <tree string="Return Lines"  >
+                          <field name="product_id"/>
+                          <field name="sale_container_id"/>
+                          <field name="quantity"/>
+                       </tree>
+
+                     </field>
+                     <div class="oe_clear"/>
+                    </page>
+                    
+                    </notebook>
+                    </sheet>
+                
+
+                </form>
+            </field>
+        </record>
+ 
+      <record model='ir.ui.view' id='sale_container_receive_tree'>
+            <field name="name">sale.container.receive.tree</field>
+            <field name="model">sale.container.receive</field>
+            <field name="arch" type="xml">
+                <tree string="Sale Container Receive">
+                    <field name="name" />
+                    <field name="date_container"/>
+                    <field name="user_id"/>
+                    <field name="partner_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_sale_container_receive_filter" model="ir.ui.view">
+            <field name="name">sale.container.receive.select</field>
+            <field name="model">sale.container.receive</field>
+            <field name="arch" type="xml">
+            <search string="Search Sale Container Receive">
+                    <field name="name" />
+                    <field name="user_id" />
+                    <field name="state" />
+                    
+                    <field name="partner_id" />
+                    <separator/>
+                    <filter name="open" string="Open" domain="[('state','=', 'open')]"/>
+                    <separator/>
+                    <filter string="Creator" icon="terp-partner" domain="[]" context="{'group_by':'create_uid'}"/>
+                    <filter string="User" icon="terp-partner" domain="[]" context="{'group_by':'user_id'}"/>
+                    <filter string="Partner" icon="terp-partner" domain="[]" context="{'group_by':'partner_id'}"/>
+                    <separator/>
+                    <filter string="State" icon="terp-partner" domain="[]" context="{'group_by':'state'}"/>
+            </search>
+            </field>
+        </record>
+
+
+        <record id='sale_container_receive_act' model='ir.actions.act_window'>
+            <field name="name">Sale Container Receive</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sale.container.receive</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{"search_default_parent_false" : True,}</field>  
+            <field name="search_view_id" ref="view_sale_container_receive_filter"/>
+            
+        </record>
+
+</data>
+</openerp>

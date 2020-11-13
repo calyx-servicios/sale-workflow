@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model='ir.ui.view' id='view_sale_container_simple_form'>
+        <field name='name'>sale.container.simple.form</field>
+        <field name='model'>sale.container.simple</field>
+        <field name='arch' type='xml'>
+            <form string="Sale Container Simple" >
+
+                <group>
+                <group>
+                        <field name="partner_id" />
+                </group>
+                </group>
+                <notebook>
+                <page name="line_ids_page" string="Lines">
+                        <field name="line_ids" >
+                        <tree  create="false" editable="bottom">
+                                <field name="product_id" domain="[('container_ok','=',True)]" />
+                                <field name="quantity" readonly="1"/>
+                                <field name="returned_quantity"/>
+                        </tree>
+                        </field>
+                    </page>
+                </notebook>
+                <footer>
+                  <!-- <button name='set_next' string='Next'  class='oe_highlight' type='object'/> -->
+                  <button name='set_return' string='Return'  class='oe_highlight' type='object'/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+</odoo>

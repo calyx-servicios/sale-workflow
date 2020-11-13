@@ -1,0 +1,467 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* sale_container
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-15 17:05+0000\n"
+"PO-Revision-Date: 2019-11-15 17:05+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_container
+#: model:ir.ui.view,arch_db:sale_container.report_sale_container_document
+msgid "<span>Container # </span>"
+msgstr "<span>Contenedor # </span>"
+
+#. module: sale_container
+#: model:ir.ui.view,arch_db:sale_container.report_sale_container_document
+msgid "<strong>Date:</strong>"
+msgstr "<strong>Fecha:</strong>"
+
+#. module: sale_container
+#: model:ir.ui.view,arch_db:sale_container.report_sale_container_document
+msgid "<strong>Sign:</strong>"
+msgstr "<strong>Firma:</strong>"
+
+#. module: sale_container
+#: model:ir.ui.view,arch_db:sale_container.report_sale_container_document
+msgid "<strong>User:</strong>"
+msgstr "<strong>Usuario:</strong>"
+
+#. module: sale_container
+#: model:ir.module.category,description:sale_container.sale_container
+msgid "Base Category for Sale Container"
+msgstr "Categoria Base de Contenedores de Venta"
+
+#. module: sale_container
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_return_line_product_id
+msgid "Bill"
+msgstr "Billete"
+
+#. module: sale_container
+#: model:ir.model.fields,field_description:sale_container.field_product_product_container_ok
+#: model:ir.model.fields,field_description:sale_container.field_product_template_container_ok
+msgid "Can be used as a Container"
+msgstr "Puede utilizarse como Contenedor"
+
+#. module: sale_container
+#: model:ir.ui.view,arch_db:sale_container.sale_container_form
+#: selection:sale.container,state:0
+#: selection:sale.container.line,state:0
+#: selection:sale.container.wizard.line,state:0
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: sale_container
+#: selection:sale.container,state:0
+#: selection:sale.container.line,state:0
+#: selection:sale.container.wizard.line,state:0
+msgid "Close"
+msgstr "Cerrado"
+
+#. module: sale_container
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_company_id
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_line_company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: sale_container
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_return_line_sale_container_id
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_wizard_line_sale_container_id
+msgid "Container"
+msgstr "Contenedor"
+
+#. module: sale_container
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_date_container
+msgid "Container Date"
+msgstr "Fecha"
+
+#. module: sale_container
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_line_ids
+#: model:ir.model.fields,field_description:sale_container.field_sale_order_container_ids
+#: model:ir.ui.view,arch_db:sale_container.container_sale_order_form_inherit
+#: model:ir.ui.view,arch_db:sale_container.sale_container_form
+msgid "Container Lines"
+msgstr "Lineas de Contenedores"
+
+#. module: sale_container
+#: code:addons/sale_container/models/sale_order.py:59
+#, python-format
+msgid "Containers"
+msgstr "Contenedores"
+
+#. module: sale_container
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_create_uid
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_line_create_uid
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_return_create_uid
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_return_line_create_uid
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_wizard_create_uid
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_wizard_line_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: sale_container
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_create_date
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_line_create_date
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_return_create_date
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_return_line_create_date
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_wizard_create_date
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_wizard_line_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: sale_container
+#: model:ir.ui.view,arch_db:sale_container.view_sale_container_filter
+#: model:ir.ui.view,arch_db:sale_container.view_sale_container_line_filter
+msgid "Creator"
+msgstr "Creador"
+
+#. module: sale_container
+#: model:ir.ui.view,arch_db:sale_container.report_sale_container_document
+msgid "Description"
+msgstr "Descripción"
+
+#. module: sale_container
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_display_name
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_line_display_name
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_return_display_name
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_return_line_display_name
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_wizard_display_name
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_wizard_line_display_name
+msgid "Display Name"
+msgstr "Mostrar Nombre"
+
+#. module: sale_container
+#: model:ir.ui.view,arch_db:sale_container.sale_container_form
+#: selection:sale.container,state:0
+#: selection:sale.container.line,state:0
+#: selection:sale.container.wizard.line,state:0
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: sale_container
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_id
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_line_id
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_return_id
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_return_line_id
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_wizard_id
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_wizard_line_id
+msgid "ID"
+msgstr "ID"
+
+#. module: sale_container
+#: model:ir.model.fields,field_description:sale_container.field_sale_container___last_update
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_line___last_update
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_return___last_update
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_return_line___last_update
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_wizard___last_update
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_wizard_line___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: sale_container
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_line_write_uid
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_return_line_write_uid
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_return_write_uid
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_wizard_line_write_uid
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_wizard_write_uid
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización realizada por"
+
+#. module: sale_container
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_line_write_date
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_return_line_write_date
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_return_write_date
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_wizard_line_write_date
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_wizard_write_date
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: sale_container
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_return_line_return_line_id
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_wizard_line_line_id
+msgid "Line"
+msgstr "Linea"
+
+#. module: sale_container
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_return_line_ids
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_wizard_line_ids
+#: model:ir.ui.view,arch_db:sale_container.view_sale_container_return_form
+#: model:ir.ui.view,arch_db:sale_container.view_sale_container_wizard_form
+msgid "Lines"
+msgstr "Líneas"
+
+#. module: sale_container
+#: code:addons/sale_container/models/sale_container.py:74
+#: code:addons/sale_container/models/sale_container.py:94
+#: code:addons/sale_container/models/sale_container.py:96
+#: code:addons/sale_container/models/sale_container.py:98
+#, python-format
+msgid "New"
+msgstr "Nuevo"
+
+#. module: sale_container
+#: model:ir.ui.view,arch_db:sale_container.sale_container_form
+#: model:ir.ui.view,arch_db:sale_container.view_sale_container_filter
+#: model:ir.ui.view,arch_db:sale_container.view_sale_container_line_filter
+#: selection:sale.container,state:0
+#: selection:sale.container.line,state:0
+#: selection:sale.container.wizard.line,state:0
+msgid "Open"
+msgstr "Abierta"
+
+#. module: sale_container
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_wizard_order_id
+msgid "Order"
+msgstr "Orden"
+
+#. module: sale_container
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_name
+msgid "Order Reference"
+msgstr "Referencia del pedido"
+
+#. module: sale_container
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_line_partner_id
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_partner_id
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_return_line_partner_id
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_wizard_line_partner_id
+#: model:ir.ui.view,arch_db:sale_container.view_sale_container_filter
+#: model:ir.ui.view,arch_db:sale_container.view_sale_container_line_filter
+msgid "Partner"
+msgstr "Contacto"
+
+#. module: sale_container
+#: model:ir.actions.report,name:sale_container.action_report_sale_container
+msgid "Print Return"
+msgstr "Imprimir"
+
+#. module: sale_container
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_line_product_id
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_wizard_line_product_id
+#: model:ir.ui.view,arch_db:sale_container.view_sale_container_line_filter
+msgid "Product"
+msgstr "Producto"
+
+#. module: sale_container
+#: model:ir.model,name:sale_container.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de Producto"
+
+#. module: sale_container
+#: model:ir.ui.view,arch_db:sale_container.sale_container_form
+msgid "Products"
+msgstr "Productos"
+
+#. module: sale_container
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_line_quantity
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_return_line_quantity
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_wizard_line_quantity
+#: model:ir.ui.view,arch_db:sale_container.report_sale_container_document
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: sale_container
+#: code:addons/sale_container/models/sale_container.py:12
+#: code:addons/sale_container/models/sale_container.py:18
+#, python-format
+msgid "Quantity Must be Positive"
+msgstr "La cantidad debe ser positiva"
+
+#. module: sale_container
+#: model:ir.model,name:sale_container.model_sale_order
+msgid "Quotation"
+msgstr "Presupuesto"
+
+#. module: sale_container
+#: code:addons/sale_container/models/sale_order.py:52
+#, python-format
+msgid "Rack and Container values cant be negatives"
+msgstr "Los valores de Bandejas y Carros no pueden ser negativas"
+
+#. module: sale_container
+#: model:ir.ui.view,arch_db:sale_container.report_sale_container_document
+msgid "Remain"
+msgstr "Restante"
+
+#. module: sale_container
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_line_remain_quantity
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_return_line_remain_quantity
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_wizard_line_remain_quantity
+msgid "Remain Quantity"
+msgstr "Cantidad Restante"
+
+#. module: sale_container
+#: model:ir.actions.act_window,name:sale_container.action_container_return
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_return_line_return_id
+#: model:ir.ui.view,arch_db:sale_container.sale_container_form
+#: model:ir.ui.view,arch_db:sale_container.view_sale_container_return_form
+msgid "Return"
+msgstr "Devolver"
+
+#. module: sale_container
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_return_line_returned_quantity
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_wizard_line_returned_quantity
+msgid "Return Quantity"
+msgstr "Cantidad Devuelta"
+
+#. module: sale_container
+#: model:ir.ui.view,arch_db:sale_container.report_sale_container_document
+msgid "Returned"
+msgstr "Devuelto"
+
+#. module: sale_container
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_line_returned_quantity
+msgid "Returned Quantity"
+msgstr "Cantidad Devuelta"
+
+#. module: sale_container
+#: model:ir.actions.act_window,name:sale_container.sale_container_act
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_line_sale_container_id
+#: model:ir.module.category,name:sale_container.sale_container
+#: model:ir.ui.menu,name:sale_container.sale_container_menu
+#: model:ir.ui.view,arch_db:sale_container.sale_container_form
+#: model:ir.ui.view,arch_db:sale_container.sale_container_order_tree
+#: model:ir.ui.view,arch_db:sale_container.view_sale_container_wizard_form
+msgid "Sale Container"
+msgstr "Contenedor"
+
+#. module: sale_container
+#: model:ir.actions.act_window,name:sale_container.sale_container_line_act
+#: model:ir.ui.menu,name:sale_container.sale_container_line_menu
+#: model:ir.ui.view,arch_db:sale_container.sale_container_line_form
+#: model:ir.ui.view,arch_db:sale_container.sale_container_line_tree
+msgid "Sale Container Line"
+msgstr "Linea de Contenedores"
+
+#. module: sale_container
+#: model:ir.actions.act_window,name:sale_container.action_sale_container_return
+#: model:ir.ui.view,arch_db:sale_container.view_sale_container_return_form
+msgid "Sale Container Return"
+msgstr "Devolucion de Contenedores"
+
+#. module: sale_container
+#: model:ir.model,name:sale_container.model_sale_container_return_line
+msgid "Sale Container Return Line Wizard"
+msgstr "Linea de Devolucion de Contendores"
+
+#. module: sale_container
+#: model:ir.model,name:sale_container.model_sale_container_return
+msgid "Sale Container Return Wizard"
+msgstr "Asistente de Devolucion de Contenedores"
+
+#. module: sale_container
+#: model:ir.model,name:sale_container.model_sale_container_wizard
+msgid "Sale Container Wizard"
+msgstr "Asistente Contenedor"
+
+#. module: sale_container
+#: model:ir.model,name:sale_container.model_sale_container_wizard_line
+msgid "Sale Container Wizard Line"
+msgstr "Linea Asistente Contenedor"
+
+#. module: sale_container
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_sale_order_id
+msgid "Sale Order"
+msgstr "Pedido de venta"
+
+#. module: sale_container
+#: model:ir.model,name:sale_container.model_sale_container
+msgid "Sales Container"
+msgstr "Contenedor"
+
+#. module: sale_container
+#: model:ir.model,name:sale_container.model_sale_container_line
+msgid "Sales Container Line"
+msgstr "Linea de Contenedor"
+
+#. module: sale_container
+#: model:ir.ui.view,arch_db:sale_container.view_sale_container_filter
+msgid "Search Sale Container"
+msgstr "Busqueda de Contenedor"
+
+#. module: sale_container
+#: model:ir.ui.view,arch_db:sale_container.view_sale_container_line_filter
+msgid "Search Sale Container Line"
+msgstr "Busqueda de Lineas de Contenedor"
+
+#. module: sale_container
+#: model:ir.ui.view,arch_db:sale_container.view_sale_container_wizard_form
+msgid "Set"
+msgstr "Guardar"
+
+#. module: sale_container
+#: model:ir.model.fields,help:sale_container.field_product_product_container_ok
+#: model:ir.model.fields,help:sale_container.field_product_template_container_ok
+msgid "Specify if the product can be selected in a sales containter line."
+msgstr "Indique si el producto puede ser seleccionado como un contenedor"
+
+#. module: sale_container
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_line_state
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_state
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_wizard_line_state
+#: model:ir.ui.view,arch_db:sale_container.view_sale_container_filter
+#: model:ir.ui.view,arch_db:sale_container.view_sale_container_line_filter
+msgid "State"
+msgstr "Estado"
+
+#. module: sale_container
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_note
+msgid "Terms and conditions"
+msgstr "Términos y condiciones"
+
+#. module: sale_container
+#: model:ir.ui.view,arch_db:sale_container.sale_container_form
+msgid "Terms and conditions..."
+msgstr "Términos y condiciones..."
+
+#. module: sale_container
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_line_user_id
+#: model:ir.ui.view,arch_db:sale_container.view_sale_container_filter
+#: model:ir.ui.view,arch_db:sale_container.view_sale_container_line_filter
+msgid "User"
+msgstr "Usuario"
+
+#. module: sale_container
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_user_id
+msgid "User Create"
+msgstr "Usuario Creador"
+
+#. module: sale_container
+#: model:res.groups,name:sale_container.sale_container_user_group
+msgid "User Sale Container"
+msgstr "Usuario"
+
+#. module: sale_container
+#: model:ir.model.fields,field_description:sale_container.field_sale_container_wizard_line_wizard_id
+msgid "Wizard"
+msgstr "Asistente"
+
+#. module: sale_container
+#: model:ir.actions.act_window,help:sale_container.sale_container_act
+msgid "You can place here every move related with sales container."
+msgstr "Puede ingresar aqui cada movimiento relacionados con los contenedores"
+
+#. module: sale_container
+#: model:ir.actions.act_window,help:sale_container.sale_container_line_act
+msgid "You will find here all sales container line moves."
+msgstr "Encontrara aqui todas las lineas de contenedores"
+
+#. module: sale_container
+#: model:ir.actions.act_window,help:sale_container.sale_container_act
+msgid "You will find here all sales container moves."
+msgstr "Encontrara aqui todos los contenedores"
+
+#. module: sale_container
+#: model:ir.ui.view,arch_db:sale_container.container_sale_order_form_inherit
+msgid "⇒ Containers"
+msgstr "⇒ Contenedores"
+

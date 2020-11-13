@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    <!-- <data noupdate="1"> -->
+
+       
+        <record id="seq_sale_container" model="ir.sequence">
+            <field name="name">Sales Container</field>
+            <field name="code">sale.container</field>
+            <field name="prefix">SC</field>
+            <field name="padding">3</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="seq_sale_container_receive" model="ir.sequence">
+            <field name="name">Sales Container Receive</field>
+            <field name="code">sale.container.receive</field>
+            <field name="prefix">SCR</field>
+            <field name="padding">3</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>
